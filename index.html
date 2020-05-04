@@ -774,7 +774,7 @@ Aorem ipsum dolor sit amet elit sed lum tempor incididunt ut labore el dolore al
 			subejct:createForm['msg_subject'].value,
 			message:createForm['message'].value
 		}).then(()=>{
-			window.alert('Form Submitted');
+			swal("We Take Your Fun Seriously ", "Your Form Has Been Submitted", "success");
 			// take id #name,#email,#message .value=" ";
 			
 		}).catch(err=>{
@@ -783,7 +783,7 @@ Aorem ipsum dolor sit amet elit sed lum tempor incididunt ut labore el dolore al
 	})
 </script>
 <!--code for form and firebase ends-->
-
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="assets/js/jquery-min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
