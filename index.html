@@ -68,7 +68,7 @@
 <a class="page-scroll" href="index.html#faq">Faq</a>
 </li>
 <li class="nav-item">
-<a class="page-scroll" href="index.html#google-map-area">Contact</a>
+<a class="page-scroll" href="index.html#contact-map">Contact</a>
 </li>
 </ul>
 </div>
@@ -90,8 +90,8 @@
 <div class="col-lg-12">
     <p class="fadeInUp wow" data-wow-delay=".6s">Occassion Solutions</p>
 <h1 class="wow fadeInDown heading" data-wow-delay=".4s">We Take Your Fun Seriously</h1>
-<a href="index.html#" class="fadeInLeft wow btn btn-common btn-lg" data-wow-delay=".6s">Book Us</a>
-<a href="index.html#" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Know More</a>
+<a href="index.html#contact-map" class="fadeInLeft wow btn btn-common btn-lg page-scroll" data-wow-delay=".6s">Book Us</a>
+<a href="index.html#about" class="fadeInRight wow btn btn-border btn-lg" data-wow-delay=".6s">Know More</a>
 </div>
 </div>
 </div>
@@ -116,8 +116,8 @@
 <div class="row">
 <div class="col-lg-12">
 <p class="fadeInUp wow" data-wow-delay=".6s">Occassion Solutions</p>
-<h1 class="wow fadeInUp heading" data-wow-delay=".6s">Book US Now!</h1>
-<a href="index.html#" class="fadeInUp wow btn btn-common btn-lg" data-wow-delay=".8s">How To Book Us?</a>
+<h1 class="wow fadeInUp heading" data-wow-delay=".6s">Book Us Now!</h1>
+<a href="index.html#contact-map" class="fadeInUp wow btn btn-common btn-lg page-scroll" data-wow-delay=".8s">How To Book Us?</a>
 </div>
 </div>
 </div>
@@ -609,7 +609,7 @@ Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richa
 <div class="row">
 <div class="col-md-6 form-line">
 <div class="form-group">
-<input type="text" class="form-control" id="name" name="name" placeholder="First Name" required  data-error="Please enter your name">
+<input type="text" class="form-control" id="name" name="name" placeholder=" Name" required  data-error="Please enter your name">
 </div>
 </div>
 <div class="col-md-6 form-line">
@@ -622,6 +622,21 @@ Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richa
 <input type="tel" class="form-control" id="msg_subject" name="subject" placeholder="Subject" required data-error="Please enter your message subject">
 </div>
 </div>
+<div class="col-md-6 form-line">
+	<div class="form-group">
+		<input type="tel" class="form-control" id="phone" name="phone" placeholder="Mobile No" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" >
+	</div>
+	</div>
+	<div class="col-md-6 form-line">
+	<div class="form-group">
+	<input type="text" class="form-control"  list="event" name="event" placeholder="Type of Event " required >
+	<datalist id="event">
+		<option value="Marriage Event">
+		<option value="Birthday Party">
+
+	  </datalist>
+	</div>
+	</div>
 <div class="col-md-12">
 <div class="form-group">
 <textarea class="form-control" rows="4" id="message" placeholder="message" name="message" required data-error="Write your message"></textarea>
@@ -771,8 +786,11 @@ var firebaseConfig = {
 		db.collection('contactus').add({
 			name:createForm['name'].value,
 			email:createForm['email'].value,
+			phone:createForm['phone'].value,
+			event:createForm['event'].value,
 			subejct:createForm['subject'].value,
 			message:createForm['message'].value
+
 		}).then(()=>{
 			swal("We Take Your Fun Seriously ", "Your Form Has Been Submitted", "success");
 			// take id #name,#email,#message .value=" ";
