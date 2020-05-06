@@ -1,7 +1,10 @@
-# evemaker
-This project is made by RAhul and Aakash
-technology stack
-front end :- bootstrap, html,css,javascript
-backend : node.js(assuming 90%)
+#occasion solutions
+This project is made by Rahul and Aakash
+Technology stack Used 
+Front end :- bootstrap, html,css,javascript
+Database Firebase
 image src- google images
 text src loremipsum.io
+Read me hai book nhi 
+khtam hogya  
+😂😂😂😂
