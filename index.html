@@ -605,11 +605,11 @@ Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richa
 
 
 	
-<form role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
+<form role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator" >
 <div class="row">
 <div class="col-md-6 form-line">
 <div class="form-group">
-<input type="text" class="form-control" id="name" name="name" placeholder="First Name" required data-error="Please enter your name">
+<input type="text" class="form-control" id="name" name="name" placeholder="First Name" required  data-error="Please enter your name">
 </div>
 </div>
 <div class="col-md-6 form-line">
@@ -749,15 +749,15 @@ Aorem ipsum dolor sit amet elit sed lum tempor incididunt ut labore el dolore al
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
 <script>
- var firebaseConfig = {
-	apiKey: "AIzaSyCKAJoeJhUTk0KlGMQ4evt8V0xm87Moo1c",
-	authDomain: "forum-99.firebaseapp.com",
-	databaseURL: "https://forum-99.firebaseio.com",
-	projectId: "forum-99",
-	storageBucket: "forum-99.appspot.com",
-	messagingSenderId: "238547971160",
-	appId: "1:238547971160:web:3f47f7de5555b6cc006e2d",
-	measurementId: "G-SY3M09RHGB"
+var firebaseConfig = {
+    apiKey: "AIzaSyDz848abQKClDAZC7GZFu_XxBv1Af2JszU",
+    authDomain: "neurasoft-3.firebaseapp.com",
+    databaseURL: "https://neurasoft-3.firebaseio.com",
+    projectId: "neurasoft-3",
+    storageBucket: "neurasoft-3.appspot.com",
+    messagingSenderId: "222801142594",
+    appId: "1:222801142594:web:ba43f5e1efc433f1e59edb",
+    measurementId: "G-ZJQV842N14"
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
@@ -768,10 +768,10 @@ Aorem ipsum dolor sit amet elit sed lum tempor incididunt ut labore el dolore al
 	 const createForm=document.querySelector('#contactForm');
 	createForm.addEventListener('submit',(e)=>{
 		e.preventDefault();
-		db.collection('eventmaker').add({
+		db.collection('contactus').add({
 			name:createForm['name'].value,
 			email:createForm['email'].value,
-			subejct:createForm['msg_subject'].value,
+			subejct:createForm['subject'].value,
 			message:createForm['message'].value
 		}).then(()=>{
 			swal("We Take Your Fun Seriously ", "Your Form Has Been Submitted", "success");
@@ -783,7 +783,10 @@ Aorem ipsum dolor sit amet elit sed lum tempor incididunt ut labore el dolore al
 	})
 </script>
 <!--code for form and firebase ends-->
+<!-- script for sweet alert-->
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
 <script src="assets/js/jquery-min.js"></script>
 <script src="assets/js/popper.min.js"></script>
 <script src="assets/js/bootstrap.min.js"></script>
